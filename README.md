@@ -18,6 +18,12 @@ $ conda create -n mini-rag python=3.8
 $ conda activate mini-rag
 ```
 
+### (Optional) Setup you command line interface for better readability
+
+```bash
+export PS1="\[\033[01;32m\]\u@\h:\w\n\[\033[00m\]\$ "
+```
+
 ## Installation
 
 ### Install the required packages
@@ -33,3 +39,9 @@ $ cp .env.example .env
 ```
 
 Set your environment variables in the `.env` file.
+
+## Run the FastAPI server
+
+```bash
+$ uvicorn main:app --reload --host 0.0.0.0 --port 5000
+```
